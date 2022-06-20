@@ -1,6 +1,14 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++){
+    const opposite = target - array[i];
+    for (let j = i + 1; j < array.length; j++){
+      if (array[j] === opposite) return true;
+    }
+  }
+  return false;
 }
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +16,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+Create a function that has two parameters that is integers and a target value.
+If the two pairs of numbers in the array sum to the value of the target give an output of true.
 */
 
 /*
